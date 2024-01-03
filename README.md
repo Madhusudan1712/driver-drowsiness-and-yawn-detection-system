@@ -1,4 +1,7 @@
 # driver-drowsiness-and-yawn-detection-system
+- Past the above code file in same order with same saplings as shown in bellow figure:
+  ![Screenshot (83)](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/2d7e68c8-941e-4012-8590-2f509a7a574f)
+
 <- Aim of the Project ->
  
 - To detect drowsiness driver and alert the driver through alarm system.
@@ -36,7 +39,26 @@ The following formula is used for calculation of EAR:
 
 ![image](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/ac1ecf7d-b3f5-438d-81cd-9ffb80f867de)
 
+- Output snapshorts:
+
+- Intial interface:
 ![1 1web interface](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/b5ad3d69-9cf6-4c58-bd27-8ce362a4f28c)
+
+- Safty tips:
+![1 2safty tips](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/f34631c3-c99d-4a9c-b11c-03564585dfc0)
+
+- Narmal face:
+![2 regular](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/9cf9d326-174b-4b78-8486-26797116fc88)
+
+- talking :
+![3 talking](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/920e14d9-703a-4565-aa02-96caaded5127)
+
+- Yawing:
+![4 yawning](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/047fe778-24cd-411f-a71b-c05cfdf0006b)
+
+- Dowsiness :
+![5 drowsiness](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/c46b6155-36b2-4a7f-89bb-6acd7719fa1b)
+
 
 
 
