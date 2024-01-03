@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Driver Drowsiness Detection</title>
+    <script src="https://kit.fontawesome.com/84847aa513.js" crossorigin="anonymous"></script>
+    <style>
+
+      @media (max-width: 480px) {
+        .banner-area {
+          width: 100%;
+          height: 100vh;
+        }
+
+        .vertical-center {
+          margin-top: 100px;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 1200px) {
+        .banner-area {
+          width: 100%;
+          height: 100vh;
+        }
+      }
+
+      @media (min-width: 1201px) and (max-width: 1600px) {
+        .banner-area {
+          width: 100%;
+          height: 100vh;
+        }
+      }
+
+      @media (min-width: 1601px) and (max-width: 2600px) {
+        .banner-area {
+          width: 100%;
+          height: 100vh;
+        }
+      }
+
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: verdana;
+      }
+
+      /* menu bar*/
+      .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li {
+        display: inline-block;
+        position: relative;
+        font-size: large;
+      } 
+
+      .menu li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #292b2b;
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(28, 158, 145, 0.518);
+        padding: 0;
+        margin: 0;
+        border: 1px solid #ccc;
+      }
+
+      .submenu li {
+        display: block;
+      }
+
+      .menu li:hover .submenu {
+        display: block;
+      }
+      
+       /* banner*/
+      .banner-area{
+        width: 100%;
+        height: 100vh;
+        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+        background-image: url("../static/builtin/infot.jpg");
+        /*background-image: url({{url_for('static', filename='builtin/infot.jpg')}});*/
+      }
+
+      .project {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content{
+        text-align: center;
+      }
+
+      .content h1{
+        justify-content: end;
+        margin-top: 43px;
+        font-size: 70px;
+        color: rgb(181, 23, 23);
+      }
+
+      .content h2{
+        font-size: 20px;
+        margin-top: 120px;
+        color: rgb(9, 186, 159);
+      }
+
+      .content h3{
+        font-size: 15px;
+        margin-top: 35px;
+        color: rgb(217, 224, 120);
+      }
+
+      .content, .page-down h4{
+        font-size: 12px;
+        margin-top: 160px;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+      }
+
+      .content, .page-down{
+        margin-top:120px;
+
+      } 
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+    
+      button {
+        font-family: "Roboto",sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 20px;
+        height: 65px;
+        width: 200px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 65px;
+        background-color: rgb(220, 20, 20);
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        -webkit-transition-duration: 0.3ms;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow, transform;
+        transition-property: box-shadow, transform;
+      }
+    
+      button:hover , .button:focus, .buttons:active {
+        background-color: rgb(80, 255, 109);
+        box-shadow: 0 0 20px rgba(220, 90, 9, 0.5);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+
+      .container {
+        height: 200px;
+        position: relative;
+        border: 3px solid blue;
+      }
+    
+      .vertical-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body {
+        background-color: rgb(48, 48, 42);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    
+      .some-tips .bullets{
+        font-size: 20px;
+        margin-top: 20px;
+        color: rgb(91, 82, 20);
+      }
+
+      .some-tips{
+        background: rgb(221, 198, 179);
+      }
+
+      .some-tips .remember{
+        margin-top: 20px;
+        color: rgb(181, 6, 6);
+      }
+
+      .some-tips, .end-page{
+        margin-top: 20px;
+        color: rgb(25, 103, 59);
+      }
+
+      .end-page h4{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="banner-area">
+
+      <ul class="menu">
+        <li><a href="#"><i class="fa-solid fa-users-gear fa-fade"></i> About us</a>
+          <ul class="submenu">
+            <li><a href="#">Madhusudan_K_S USN:4AD19CS035</a></li>
+            <li><a href="#">Cherith_L USN:4AD19CS017</a></li>
+            <li><a href="#">Keerthana_N USN:4AD19CS027</a></li>
+            <li><a href="#">Mohammed_Aathir_Suhaib USN:4AD18CS039</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="project">
+        <div class="content">
+          <h1>Driver Drowsy-yawn Detection</h1>
+          <h2><i class="fa-solid fa-car-side"></i>Click bellow button to Start..!<i class="fa-solid fa-car-side"></i></h2>
+          <div class="vertical-center">
+            <button id="run-btn">Drowsy mode</button>
+          </div>
+          <h3>Drive Carefully...!                                                                                       <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i></h3>
+        </div>
+      </div>   
+    </div>
+
+    <div class="some-tips">
+      <h2>Safety tips</h2>
+      <div class="bullets">
+        <p>
+          1. Wear your seatbelt: Always buckle up before starting your car. Seatbelts save lives and significantly reduce the risk of injury in case of an accident.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          2. Follow speed limits: Observe and adhere to the posted speed limits. Speeding increases the likelihood of accidents and reduces your ability to react to unexpected situations.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          3. Maintain a safe distance: Keep a safe following distance between your car and the vehicle in front of you. This gives you enough time to react and brake if necessary.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          4. Avoid distractions: Stay focused on the road and avoid distractions like texting, eating, or using electronic devices while driving. Keep your attention solely on the task of driving.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          5. Use turn signals: Always use your turn signals to indicate your intentions to other drivers. This allows them to anticipate your movements and helps prevent collisions.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          6. Check blind spots: Before changing lanes or making turns, check your blind spots by quickly glancing over your shoulder. This ensures that you are aware of any vehicles that may not be visible in your mirrors.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          7. Observe traffic laws: Follow all traffic laws, including stopping at red lights and stop signs, yielding the right of way when required, and using appropriate signals when turning.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          8. Avoid aggressive driving: Maintain a calm and patient attitude while driving. Avoid aggressive behaviors such as tailgating, honking excessively, or making rude gestures, as they can escalate dangerous situations.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          9. Be aware of weather conditions: Adjust your driving according to the weather conditions. Slow down during rain, snow, or fog, and increase your following distance to allow for longer stopping distances.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <p>
+          10. Regularly maintain your vehicle: Keep your car in good condition by following the manufacturer's recommended maintenance schedule. Check your tires, brakes, lights, and fluid levels regularly to ensure they are in proper working order.
+        </p>
+      </div>
+
+      <div class="remember">
+        <h3>Remember: Defensive driving and being aware of your surroundings are key to staying safe on the road. These tips are general guidelines, and specific situations may require additional precautions. Always use your best judgment and prioritize safety while driving.</h3>
+      </div>
+
+      <div class="end-page">
+        <h4>-- <i class="fa-sharp fa-regular fa-xmarks-lines"> --</i> </h4>
+      </div>
+
+    </div>
+
+    <script>
+      //this is for drowsiness
+      var runBtn = document.getElementById('run-btn');
+      runBtn.addEventListener('click', runScript);
+
+      function runScript() {
+        console.log('Button clicked'); // add this line
+        fetch('/run_script')
+        .then(function(response) {
+          console.log('Script executed');
+        }); // add this line
+      }
+      
+    </script>
+
+  </body>
+</html>
