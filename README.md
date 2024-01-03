@@ -1,8 +1,24 @@
 # driver-drowsiness-and-yawn-detection-system
 - Past the above code files in same order with same saplings as shown in bellow figure:
 - IDE : VS code
-  
   ![Screenshot (83)](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/2d7e68c8-941e-4012-8590-2f509a7a574f)
+
+<- Install libraries for import ->
+
+from scipy.spatial import distance as dist
+from imutils.video import VideoStream
+from imutils import face_utils
+from threading import Thread
+import numpy as np
+import argparse
+import imutils
+import time
+import dlib
+import cv2
+import os
+import winsound
+
+- How to run: run app.py file, it will generate a url like http://127.0.0.1:5000 follow link to get the output.
 
 <- Aim of the Project ->
  
