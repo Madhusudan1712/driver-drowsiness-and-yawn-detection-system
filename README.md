@@ -29,6 +29,7 @@ A training set of labeled facial landmarks on an image. These images are manuall
 - Step 4: Get the locations and create a ROI (Region of interest) for the face and apply eye detection on this ROI
 - Haar Cascade is a feature-based object detection algorithm to detect objects from images. A cascade function is trained on lots of positive and negative images for detection. The algorithm does not require extensive computation and can run in real-time. We can train our own cascade function for custom objects like animals, cars, bikes, etc. Haar Cascade can’t be used for face recognition since it only identifies the matching shape and size. Haar cascade uses the cascade function and cascading window. It tries to calculate features for every window and classify positive and negative. If the window could be a part of an object, then positive, else, negative.
 - EYE ASPECT RATIO(EAR): It is an elegant solution that involves a very simple calculation based on the ratio of distances between facial landmarks of the eyes. Each eye is represented by 6 (x, y)- coordinates, starting at the left-corner of the eye and then working clockwise around the remainder of the region.
+
 ![image](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/f4506eab-09bb-44d2-acac-b1fcbcd5c6f0)
 
 The following formula is used for calculation of EAR:
