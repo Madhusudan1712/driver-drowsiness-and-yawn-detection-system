@@ -35,7 +35,6 @@ A training set of labeled facial landmarks on an image. These images are manuall
 The following formula is used for calculation of EAR:
 
 ![image](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/ac1ecf7d-b3f5-438d-81cd-9ffb80f867de)
-![image](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/ebefdcca-d232-4406-9f74-aac570fa3026)
 
 
 
