@@ -36,6 +36,8 @@ The following formula is used for calculation of EAR:
 
 ![image](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/ac1ecf7d-b3f5-438d-81cd-9ffb80f867de)
 
+![1 1web interface](https://github.com/Madhusudan1712/driver-drowsiness-and-yawn-detection-system/assets/146712964/b5ad3d69-9cf6-4c58-bd27-8ce362a4f28c)
+
 
 
 
